@@ -1,0 +1,72 @@
+<style type="text/css">
+    *[v-cloak] {
+        display: none;
+    }
+
+    .ad3media__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        min-height: 360px;
+        background: #000;
+        opacity: .7;
+        filter: alpha(opacity=70);
+        z-index: 100100;
+    }
+
+    .ad3media__modal {
+        background-color: #fff;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, .3);
+        width: 500px;
+        overflow: hidden;
+        margin-left: -250px;
+        margin-top: -125px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 100105;
+    }
+
+    .ad3media__modal .title {
+        background: #fcfcfc;
+        border-bottom: 1px solid #dfdfdf;
+        height: 36px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 36px;
+        padding: 0 36px 0 16px;
+        top: 0;
+        right: 0;
+        left: 0;
+        text-align: left;
+    }
+
+    .ad3media__modal .body {
+        padding: 20px;
+    }
+
+    .ad3media__modal .footer {
+        background-color: #f5f5f5;
+        padding: 10px 20px;
+    }
+
+    .ad3media__modal .footer > div {
+        display: inline-block;
+    }
+
+    .ad3media__modal .footer .cancel {
+        background-color: white;
+        color: #a00;
+    }
+
+    .ad3media__modal .field {
+        width: 100%;
+    }
+
+    .ad3media__modal .error {
+        padding: 3px 12px;
+        margin: 0 0 10px 0;
+    }
+</style>
