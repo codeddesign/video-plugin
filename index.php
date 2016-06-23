@@ -37,17 +37,10 @@ class VideoPluginController
      */
     public function addCustom()
     {
-        add_meta_box(
-            'ad3media_box', // this is HTML id of the box on edit screen
-            'Video', // title of the box
-            array(&$this, 'printVideoSide'), // function to be called to display the checkboxes, see the function below
-            'post', // on which edit screen the box should appear
-            'side', // part of page where the box should appear
-            'high' // priority of the box
-        );
+        add_action('media_buttons', array(&$this, 'printCustomMedia'));
     }
 
-    public function printVideoSide()
+    public function printCustomMedia()
     {
         $config = ad3mediaConfig();
 
