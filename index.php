@@ -59,7 +59,9 @@ function ad3media_short_handler($attr)
 {
     $config = ad3mediaConfig();
 
-    return '<script src="'.$config['player_host'].'/p'.$attr['id'].'.js"></script>';
+    $pattern = '<script src="%s/p%s.%s.js"></script>';
+
+    return sprintf($pattern, $config['player_host'], $attr['campaign'], $attr['youtube']);
 }
 
 add_shortcode('ad3media', 'ad3media_short_handler');

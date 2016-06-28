@@ -105,9 +105,9 @@
 
                 this.error = 'Please wait..';
 
-                this.$http.get('<?=$config['app_host']?>/plugin/campaign-add', this.campaign)
+                this.$http.get('<?=$config['app_host'];?>/plugin/campaign-add', this.campaign)
                     .then(function(response) {
-                        if(response.data.error) {
+                        if (response.data.error) {
                             this.error = response.data.error;
 
                             return false;
@@ -115,7 +115,7 @@
 
                         this.error = 'Copy the code into your post or click Insert';
 
-                        this.code = '[ad3media id="' + response.data.play_id + '"]';
+                        this.code = '[ad3media campaign="' + response.data.campaign + '" youtube="' + response.data.youtube + '"]';
                     });
             },
 
