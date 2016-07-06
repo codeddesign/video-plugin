@@ -9,9 +9,9 @@ Version: 0.1
 function ad3mediaConfig()
 {
     if (file_exists(realpath(__DIR__.'/config.dev.php'))) {
-        $config = require 'config.dev.php';
+        $config = require realpath(__DIR__.'/config.dev.php');
     } else {
-        $config = require 'config.php';
+        $config = require realpath(__DIR__.'/config.php');
     }
 
     return $config;

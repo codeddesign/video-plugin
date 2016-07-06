@@ -4,7 +4,7 @@
     }
 
     .ad3media__button {
-    	background: url('/wp-content/plugins/videoapp-plugin/view/images/ad3button.png') !important;
+    	background: url('../wp-content/plugins/video-plugin/view/images/ad3button.png') !important;
 	    width: 48px;
 	    text-indent: -9999px;
 	    border: none;
@@ -72,7 +72,32 @@
     }
 
     .ad3media__modal .field {
-        width: 100%;
+        width: calc(100% - 25px);
+    }
+
+    .ad3media__modal .status-icon {
+        height: 27px;
+        padding-left: 3px;
+    }
+
+    .ad3media__modal .status-icon.red {
+        display: inline-block;
+        color: red;
+    }
+
+    .ad3media__modal .status-icon.green {
+        display: inline-block;
+        color: green;
+    }
+
+    .ad3media__modal .status-icon.blue {
+        display: inline-block;
+        color: blue;
+    }
+
+    .ad3media__modal .status-icon i {
+        line-height: 27px;
+        font-size: 15px;
     }
 
     .ad3media__modal .error {
