@@ -1,17 +1,17 @@
 <?php
 /*
-Plugin Name: VideoPlugin
-Plugin URI: none
-Description: VideoPlugin System
-Version: 0.1
+Plugin Name: Ad3Media Video Ads
+Plugin URI: http://ad3media.com
+Description: High Conversion Video Ads Marketing
+Version: 0.4
  */
 
 function ad3mediaConfig()
 {
     if (file_exists(realpath(__DIR__.'/config.dev.php'))) {
-        $config = require 'config.dev.php';
+        $config = require realpath(__DIR__.'/config.dev.php');
     } else {
-        $config = require 'config.php';
+        $config = require realpath(__DIR__.'/config.php');
     }
 
     return $config;
@@ -59,7 +59,9 @@ function ad3media_short_handler($attr)
 {
     $config = ad3mediaConfig();
 
-    return '<script src="'.$config['player_host'].'/p'.$attr['id'].'.js"></script>';
+    $pattern = '<script src="%s/p%s.%s.js"></script>';
+
+    return sprintf($pattern, $config['player_host'], $attr['campaign'], $attr['youtube']);
 }
 
 add_shortcode('ad3media', 'ad3media_short_handler');
