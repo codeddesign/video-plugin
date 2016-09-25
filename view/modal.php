@@ -1,5 +1,4 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.js"></script>
 
 <div class="ad3media__plugin" id="ad3media__move" v-cloak="">
     <div class="ad3media__overlay" v-if="showingModal" v-on:click="toggleModal"></div>
@@ -54,11 +53,15 @@
     </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.25/vue.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.8.0/vue-resource.js"></script>
 <script type="text/javascript">
     (function($) {
+        if(!$) {
+            console.error('jQuery is missing?');
+            return false;
+        }
+
         var $ad3 = $('#ad3media__move'),
             $clone = $ad3.clone();
 
